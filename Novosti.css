@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #00e5ff; /* Неоново-голубой */
+    --secondary-color: #ff00ea; /* Фуксия */
+    --background-color: #0d0d21; /* Очень тёмно-синий */
+    --text-color: #e6e6ff; /* Мягкий белый */
+    --bright-text: #ffffff; /* Яркий белый для основного текста */
+    --card-bg: #1a1a38; /* Тёмно-синий для карточек */
+    --border-radius: 1rem;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: rgba(13, 13, 33, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color) !important;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+    text-shadow: 0 0 8px var(--secondary-color);
+}
+
+.btn-custom {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--background-color);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    transform: translateY(-3px);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(0, 229, 255, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+/* Изменения для раздела "Подробности" */
+.article-section h3 {
+    color: var(--secondary-color);
+    text-shadow: 0 0 8px var(--secondary-color);
+}
+
+.article-section .card p {
+    color: var(--bright-text); /* Текст в карточках - ярко-белый */
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255, 0, 234, 0.4);
+}
+
+.card-img-top {
+    border-top-left-radius: calc(var(--border-radius) - 2px);
+    border-top-right-radius: calc(var(--border-radius) - 2px);
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--secondary-color) !important;
+    text-shadow: 0 0 5px rgba(255, 0, 234, 0.5);
+}
+
+.card-text {
+    color: var(--text-color);
+}
+
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--primary-color);
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    bottom: 2rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    filter: drop-shadow(0 0 5px var(--primary-color));
+}
+
+footer {
+    background-color: var(--background-color);
+    border-top: 2px solid var(--secondary-color);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.article-section {
+    padding: 2rem 0;
+}
+
+.article-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    text-shadow: 0 0 8px var(--secondary-color);
+}
+
+.divider {
+    height: 3px;
+    width: 50%;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    margin: 2rem auto;
+    border-radius: 5px;
+}
