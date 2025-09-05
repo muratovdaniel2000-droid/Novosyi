@@ -78,13 +78,15 @@ body::before {
     padding: 8px 12px;
     border: 1px solid #00ffff;
     border-radius: 5px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 5px #00ffff; /* Подсветка */
+    transition: all 0.3s ease;
 }
 
 .user-profile:hover {
     background-color: #00ffff;
     color: #0c0c0c;
-    box-shadow: 0 0 10px #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+    transform: translateY(-3px);
 }
 
 .cart-button {
@@ -116,7 +118,6 @@ body::before {
     100% { transform: scale(1); }
 }
 
-/* Выпадающее меню */
 
 
 .dropdown {
@@ -131,13 +132,15 @@ body::before {
     padding: 10px 15px;
     text-decoration: none;
     text-transform: uppercase;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px #00ffff; /* Подсветка */
 }
 
 .nav-button:hover {
     background-color: #00ffff;
     color: #0c0c0c;
     box-shadow: 0 0 15px #00ffff;
+    transform: translateY(-3px);
 }
 
 .dropdown-content {
@@ -145,7 +148,7 @@ body::before {
     position: absolute;
     background-color: rgba(26, 26, 26, 0.95);
     min-width: 250px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px #00ffff; /* Подсветка */
     z-index: 1;
     border: 1px solid #00ffff;
     top: 100%;
@@ -159,10 +162,12 @@ body::before {
     text-decoration: none;
     display: block;
     border-bottom: 1px solid #0c0c0c;
+    transition: all 0.3s ease;
 }
 
 .dropdown-content a:hover {
     background-color: #0d0d0d;
+    text-shadow: 0 0 10px #00ffff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -175,6 +180,9 @@ body::before {
     overflow: hidden;
     height: 450px;
     position: relative;
+    box-shadow: 0 0 20px #00ffff; /* Подсветка */
+    border-radius: 10px;
+    border: 1px solid #00ffff;
 }
 
 .promo-carousel {
@@ -228,12 +236,13 @@ body::before {
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #00e6e6;
     box-shadow: 0 0 15px #00ffff;
+    transform: scale(1.05);
 }
 
 @keyframes carousel-slide {
@@ -276,6 +285,7 @@ h3 {
     text-align: center;
     width: 250px;
     box-shadow: 0 0 10px #00ffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card img {
@@ -288,12 +298,19 @@ h3 {
 .product-card h4 {
     margin: 0 0 10px 0;
     color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
 }
 
 .product-card .price {
     font-size: 1.2em;
     color: #f0f0f0;
     margin-bottom: 15px;
+}
+
+/* Эффект при наведении */
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00ffff;
 }
 
 .buy-button {
@@ -304,17 +321,21 @@ h3 {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .buy-button:hover {
     background-color: #00e6e6;
     box-shadow: 0 0 15px #00ffff;
+    transform: scale(1.05);
 }
 
 /* Рекламная секция */
 .ad-section {
     background: rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px #00ffff;
+    border-radius: 10px;
+    margin: 20px;
 }
 
 .ad-section p {
@@ -331,13 +352,14 @@ h3 {
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .news-button:hover {
     background-color: #00ffff;
     color: #0c0c0c;
     box-shadow: 0 0 15px #00ffff;
+    transform: scale(1.05);
 }
 
 /* Футер */
@@ -368,11 +390,12 @@ h3 {
 .footer-nav a {
     color: #f0f0f0;
     text-decoration: none;
-    transition: text-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .footer-nav a:hover {
     text-shadow: 0 0 10px #f0f0f0;
+    transform: translateY(-2px);
 }
 
 .footer-bottom {
@@ -393,9 +416,10 @@ h3 {
 .social-links a {
     color: #00ffff;
     text-decoration: none;
-    transition: text-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .social-links a:hover {
     text-shadow: 0 0 10px #00ffff;
+    transform: translateY(-2px);
 }
